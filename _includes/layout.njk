@@ -1,0 +1,42 @@
+---
+judul: Hello World
+deskripsi: Ini adalah template Frontend
+---
+
+<!-- 
+
+	Website ini dibuat oleh Zen
+	about-zen.vercel.app
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ judul }}</title>
+	<meta charset="utf-8">
+	<meta name="description" content="{{ deskripsi }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="turbolinks-cache-control" content="no-cache">
+	<meta property="og:image" content="/dist/jean.jpg">
+	<link rel='icon' type='image/png' href='/dist/ungu.png'>
+	<link rel='stylesheet' href='/dist/remixicon/remixicon.css'>
+	<link rel="stylesheet" type="text/css" href="/dist/tailwind.css">
+	<link rel="stylesheet" type="text/css" href="/dist/progress.css">
+	<link rel="stylesheet" type="text/css" href="/dist/global.css">
+	<script type="text/javascript" src="/dist/tools.js"></script>
+	<script type="text/javascript" src="/dist/turbolinks.js" defer=""></script>
+	<script type="text/javascript" src="/dist/alpine.min.js"></script>
+	<script>
+		vh = 0
+		tinggiFull = () => {
+			vh = window.innerHeight * 0.01
+			document.documentElement.style.setProperty("--vh", `${vh}px`)
+		}
+		tinggiFull()
+		window.addEventListener("resize", tinggiFull)
+	</script>
+</head>
+<body>
+	{{ content | safe }}
+</body>
+</html>

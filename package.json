@@ -1,0 +1,27 @@
+{
+  "name": "latihan-alpine-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "eleventy --serve",
+    "tailwind": "tailwindcss build tailwind.pcss -o _site/dist/tailwind.css",
+    "build": "NODE_ENV=production npm run tailwind && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaini30/latihan-alpine-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mzaini30/latihan-alpine-js/issues"
+  },
+  "homepage": "https://github.com/mzaini30/latihan-alpine-js#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "tailwindcss": "^1.9.6"
+  }
+}
